@@ -1,0 +1,43 @@
+﻿@model Contact
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta name="viewport" content="width = device-width" />
+        <title>Contact card</title>
+    </head>
+
+    <body>
+         <div class="card">
+
+             <div class="container">
+
+                 <h2>
+                     
+                    <label asp-for="Surname">@Model.Surname</label>
+                     
+                    <label asp-for="Name">@Model.Name</label>                     
+                         
+                    <label asp-for="SecondName">@Model.SecondName</label>
+                     
+                 </h2>
+                 
+                 <p>
+                     <label asp-for="Surname">Номер:</label>
+                     <label asp-for="PhoneNumber">@Model.PhoneNumber</label>
+                 </p>
+
+                 <p>
+                     <label asp-for="Surname">Описание:</label>
+                     <label asp-for="Description">@Model.Description</label>
+                 </p>
+
+             </div>
+  
+         </div>         
+
+    </body>
+
+</html>

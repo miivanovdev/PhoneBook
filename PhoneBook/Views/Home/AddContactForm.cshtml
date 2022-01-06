@@ -1,0 +1,55 @@
+﻿@model Contact
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title>Contact card</title>
+</head>
+
+<body>
+    <form action="AddContactForm" method="post">
+        <div class="card">
+
+            <div class="container">
+
+                <input hidden="hidden" class="form-control" asp-for="@Model.Id" />
+
+                <p>
+                    <label class="form-label" asp-for="Surname"></label>
+                    <input class="form-control" asp-for="@Model.Surname" />
+                </p>
+
+
+                <p>
+                    <label class="form-label" asp-for="Name"></label>
+                    <input class="form-control" asp-for="@Model.Name" />
+                </p>
+
+                <p>
+                    <label class="form-label" asp-for="SecondName"></label>
+                    <input class="form-control" asp-for="@Model.SecondName" />
+                </p>
+
+                <p>
+                    <label class="form-label" asp-for="PhoneNumber">Номер:</label>
+                    <input class="form-control" asp-for="@Model.PhoneNumber" />
+                </p>
+
+                <p>
+                    <label class="form-label" asp-for="Description">Описание:</label>
+                    <input class="form-control" asp-for="@Model.Description" />
+                </p>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg pull-left">Submit</button>
+
+        </div>
+    </form>   
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+﻿@model ContactListViewModel
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta name="viewport" content="width = device-width" />
+        <title>PhoneBook</title>
+    </head>
+
+    <body>
+        <h2>
+            Contact list
+        </h2>
+        <div class="container">
+
+
+            <div class="table-bordered">
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Surname</th>
+                            <th>Name</th>
+                            <th>SecondName</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var c in Model.Contacts)
+                        {
+                            <tr>
+
+                                <td>
+                                    <a asp-controller="Home" asp-action="ContactCardForm" asp-route-id="@c.Id">@c.Id</a>
+                                </td>
+                                <td>@c.Surname</td>
+                                <td>@c.Name</td>
+                                <td>@c.SecondName</td>
+
+                                <td>
+                                    <a class="btn mini blue-stripe" asp-action="EditContactForm" asp-route-id="@c.Id">Edit</a>
+                                </td>
+
+                                <td>
+                                    <a class="confirm-delete btn mini red-stripe" role="button" asp-action="DeleteContact" asp-route-id="@c.Id">Delete</a>
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+
+                <div page-model="@Model.PagingInfo"
+                     page-action="Index"
+                     page-classes-enabled="true"
+                     page-class="btn"
+                     page-class-normal="btn-secondary"
+                     page-class-selected="btn-primary"
+                     class="btn-group pull-right m-1">
+                </div>
+
+
+            </div>
+
+            <a asp-controller="Home" asp-action="AddContactForm" class="btn btn-primary btn-lg pull-left">Add new contact</a>
+
+        </div>
+
+    </body>
+
+</html>
+
+
+
