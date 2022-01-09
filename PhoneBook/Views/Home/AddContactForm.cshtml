@@ -14,36 +14,33 @@
         <div class="card">
 
             <div class="container">
-
-                @if (Model != null)
-                {
-                    <input hidden="hidden" class="form-control" asp-for="@Model.Id" />
-                }
-
+               
+                <input hidden="hidden" class="form-control" asp-for="Id" />
+               
                 <p>
                     <label class="form-label" asp-for="Surname"></label>
-                    <input class="form-control" asp-for="@Model.Surname" />
+                    <input class="form-control" asp-for="Surname" />
                 </p>
 
 
                 <p>
                     <label class="form-label" asp-for="Name"></label>
-                    <input class="form-control" asp-for="@Model.Name" />
+                    <input class="form-control" asp-for="Name" />
                 </p>
 
                 <p>
                     <label class="form-label" asp-for="SecondName"></label>
-                    <input class="form-control" asp-for="@Model.SecondName" />
+                    <input class="form-control" asp-for="SecondName" />
                 </p>
 
                 <p>
                     <label class="form-label" asp-for="PhoneNumber">Номер:</label>
-                    <input class="form-control" asp-for="@Model.PhoneNumber" />
+                    <input class="form-control" asp-for="PhoneNumber" />
                 </p>
 
                 <p>
                     <label class="form-label" asp-for="Description">Описание:</label>
-                    <input class="form-control" asp-for="@Model.Description" />
+                    <input class="form-control" asp-for="Description" />
                 </p>
 
             </div>

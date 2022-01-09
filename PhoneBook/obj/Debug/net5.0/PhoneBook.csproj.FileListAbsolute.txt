@@ -184,3 +184,4 @@ C:\Users\misha\Desktop\modul-20\PhoneBook\PhoneBook\obj\Debug\net5.0\ref\PhoneBo
 C:\Users\misha\Desktop\modul-20\PhoneBook\PhoneBook\obj\Debug\net5.0\PhoneBook.pdb
 C:\Users\misha\Desktop\modul-20\PhoneBook\PhoneBook\obj\Debug\net5.0\PhoneBook.genruntimeconfig.cache
 C:\Users\misha\Desktop\modul-20\PhoneBook\PhoneBook\obj\Debug\net5.0\Razor\Views\Home\AddContactForm.cshtml.g.cs
+C:\Users\misha\Desktop\modul-20\PhoneBook\PhoneBook\obj\Debug\net5.0\PhoneBook.csproj.AssemblyReference.cache
