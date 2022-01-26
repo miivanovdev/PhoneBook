@@ -49,13 +49,15 @@ namespace PhoneBook.Controllers
         {
             var contact = _Repository.Contacts.FirstOrDefault(x => x.Id == id);
 
+            contact.Image = @"wwwroot/Images/img_avatar.png";
+
             return View(contact);
         }
 
         [HttpGet]
         public ViewResult AddContactForm()
-        {            
-            return View("AddContactForm");
+        {
+            return View("AddContactForm", new Contact());
         }
                 
         [HttpPost]
