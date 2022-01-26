@@ -12,7 +12,7 @@ namespace PhoneBook.Models
 
         public PhoneBookContext()
         {
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
