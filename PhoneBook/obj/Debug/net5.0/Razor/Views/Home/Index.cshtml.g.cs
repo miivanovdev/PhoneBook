@@ -14,20 +14,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "C:\Users\misha\Desktop\modul-20\PhoneBook\PhoneBook\Views\_ViewImports.cshtml"
-using PhoneBook.Models;
+using PhoneBookDb.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\misha\Desktop\modul-20\PhoneBook\PhoneBook\Views\_ViewImports.cshtml"
-using PhoneBook.Models.ViewModels;
+using PhoneBook.ViewModels;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1d7896afe28e6c50c4c00257f1da7f7075a72913", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0071b4e075f057af1553b8fd89bcea6511b3273b", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a8cc647f710bed8ae34cd34b789a8ce55d4fd16a", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ContactListViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Home", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -72,7 +72,7 @@ using PhoneBook.Models.ViewModels;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d7896afe28e6c50c4c00257f1da7f7075a729138107", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d7896afe28e6c50c4c00257f1da7f7075a729138102", async() => {
                 WriteLiteral("\r\n        <meta name=\"viewport\" content=\"width = device-width\" />\r\n        <title>PhoneBook</title>\r\n    ");
             }
             );
@@ -86,7 +86,7 @@ using PhoneBook.Models.ViewModels;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d7896afe28e6c50c4c00257f1da7f7075a729139192", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d7896afe28e6c50c4c00257f1da7f7075a729139187", async() => {
                 WriteLiteral(@"
         <h2>
             Contact list
@@ -118,7 +118,7 @@ using PhoneBook.Models.ViewModels;
 #line hidden
 #nullable disable
                 WriteLiteral("                            <tr>\r\n\r\n                                <td>\r\n                                    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d7896afe28e6c50c4c00257f1da7f7075a7291310453", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d7896afe28e6c50c4c00257f1da7f7075a7291310448", async() => {
 #nullable restore
 #line 38 "C:\Users\misha\Desktop\modul-20\PhoneBook\PhoneBook\Views\Home\Index.cshtml"
                                                                                                           Write(c.Id);
@@ -181,7 +181,7 @@ using PhoneBook.Models.ViewModels;
 #line hidden
 #nullable disable
                 WriteLiteral("</td>\r\n\r\n                                <td>\r\n                                    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d7896afe28e6c50c4c00257f1da7f7075a7291314173", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d7896afe28e6c50c4c00257f1da7f7075a7291314168", async() => {
                     WriteLiteral("Edit");
                 }
                 );
@@ -213,7 +213,7 @@ using PhoneBook.Models.ViewModels;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                                </td>\r\n\r\n                                <td>\r\n                                    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d7896afe28e6c50c4c00257f1da7f7075a7291316678", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d7896afe28e6c50c4c00257f1da7f7075a7291316673", async() => {
                     WriteLiteral("Delete");
                 }
                 );
@@ -254,7 +254,7 @@ using PhoneBook.Models.ViewModels;
 #line hidden
 #nullable disable
                 WriteLiteral("                    </tbody>\r\n\r\n                </table>\r\n\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d7896afe28e6c50c4c00257f1da7f7075a7291319562", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d7896afe28e6c50c4c00257f1da7f7075a7291319557", async() => {
                     WriteLiteral("\r\n                ");
                 }
                 );
@@ -293,7 +293,7 @@ __PhoneBook_Infrastructure_PageLinkTagHelper.PageClassesEnabled = true;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n\r\n\r\n            </div>\r\n\r\n            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d7896afe28e6c50c4c00257f1da7f7075a7291322454", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d7896afe28e6c50c4c00257f1da7f7075a7291322449", async() => {
                     WriteLiteral("Add new contact");
                 }
                 );

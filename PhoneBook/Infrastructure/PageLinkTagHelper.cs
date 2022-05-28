@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
-using PhoneBook.Models.ViewModels;
+using PhoneBook.ViewModels;
 
 namespace PhoneBook.Infrastructure
 {

@@ -1,4 +1,4 @@
-﻿@model Contact
+﻿@model ContactViewModel
 
 <!DOCTYPE html>
 
@@ -15,24 +15,23 @@
              <div class="container">
 
                  <h2>
-                     
-                    <label asp-for="Surname">@Model.Surname</label>
-                     
-                    <label asp-for="Name">@Model.Name</label>                     
-                         
-                    <label asp-for="SecondName">@Model.SecondName</label>
-                     
+
+                     <label asp-for="Surname">@Model.Surname</label>
+
+                     <label asp-for="Name">@Model.Name</label>
+
+                     <label asp-for="SecondName">@Model.SecondName</label>
+
                  </h2>
                  
-                 <image src="@Url.Content(Model.Image)"/>
+                 <img src="~/Avatars/@Model.SavedImage" />
 
-                 <p>
-                     <label asp-for="Surname">Номер:</label>
+                 <p>                     
                      <label asp-for="PhoneNumber">@Model.PhoneNumber</label>
                  </p>
 
                  <p>
-                     <label asp-for="Surname">Описание:</label>
+                     <label asp-for="Description">Описание:</label>
                      <label asp-for="Description">@Model.Description</label>
                  </p>
 

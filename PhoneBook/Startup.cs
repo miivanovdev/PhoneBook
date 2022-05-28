@@ -4,7 +4,10 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using PhoneBook.Models;
+using PhoneBook.DataAccess;
+using PhoneBook.Services;
+using PhoneBookDb;
+using PhoneBookDb.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,18 +17,23 @@ namespace PhoneBook
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment webHostEnvironment)
         {
             Configuration = configuration;
+            Environment = webHostEnvironment;
         }
 
         public IConfiguration Configuration { get; }
+
+        public IWebHostEnvironment Environment { get;  }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<PhoneBookContext>();
-            services.AddScoped<IContactRepository, ContactRepository>();
+            services.AddScoped<IRepository<Contact>, ContactRepository>();
+            services.AddScoped<ContactManagerService>();
+            services.AddScoped<ContactImageService>();
             services.AddControllersWithViews();
         }
 

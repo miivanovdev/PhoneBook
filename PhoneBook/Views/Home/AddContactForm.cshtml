@@ -1,4 +1,23 @@
-﻿@model Contact
+﻿@model ContactViewModel
+
+@{ Layout = "_Layout"; }
+
+@section scripts{ 
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("input.input-validation-error")
+            .closest(".form-group").addClass("text-danger");
+    });
+</script>
+<script type="text/javascript">
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function () {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+</script>
+}
 
 <!DOCTYPE html>
 
@@ -10,46 +29,58 @@
 </head>
 
 <body>
-    <form action="AddContactForm" method="post">
+    <form class="m-1 p-1" action="AddContactForm" enctype="multipart/form-data" method="post">
         <div class="card">
 
             <div class="container">
-               
+
+                <img src="~/Avatars/@Model.SavedImage" />
+
                 <input hidden="hidden" class="form-control" asp-for="@Model.Id" />
-               
-                <p>
-                    <label class="form-label" asp-for="@Model.Surname"></label>
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="@Model.LoadImage" class="control-label"></label>
+                        <div class="custom-file">
+                            <input asp-for="@Model.LoadImage" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                        <span asp-validation-for="@Model.LoadImage" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="@Model.Surname"></label>
                     <input class="form-control" asp-for="@Model.Surname" />
-                </p>
+                </div>
 
 
-                <p>
-                    <label class="form-label" asp-for="@Model.Name"></label>
+                <div class="form-group">
+                    <label asp-for="@Model.Name"></label>
                     <input class="form-control" asp-for="@Model.Name" />
-                </p>
+                </div>
 
-                <p>
+                <div class="form-group">
                     <label class="form-label" asp-for="@Model.SecondName"></label>
                     <input class="form-control" asp-for="@Model.SecondName" />
-                </p>
+                </div>
 
-                <p>
+                <div class="form-group">
                     <label class="form-label" asp-for="@Model.PhoneNumber">Номер:</label>
                     <input class="form-control" asp-for="@Model.PhoneNumber" />
-                </p>
+                </div>
 
-                <p>
+                <div class="form-group">
                     <label class="form-label" asp-for="@Model.Description">Описание:</label>
                     <input class="form-control" asp-for="@Model.Description" />
-                </p>
+                </div>
 
             </div>
 
             <button type="submit" class="btn btn-primary btn-lg pull-left">Submit</button>
 
         </div>
-    </form>   
-
+        
+    </form>    
 </body>
-
 </html>
