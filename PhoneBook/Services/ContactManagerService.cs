@@ -61,9 +61,9 @@ namespace PhoneBook.Services
             await _Repository.AddItemAsync(newContact);
         }
 
-        public async Task DeleteContact(ContactViewModel contactToDelete)
+        public async Task DeleteContact(int id)
         {
-            var contact = await _Repository.GetItems.FirstOrDefaultAsync(x => x.Id == contactToDelete.Id);
+            var contact = await _Repository.GetItems.FirstOrDefaultAsync(x => x.Id == id);
 
             if (contact != null)
             {

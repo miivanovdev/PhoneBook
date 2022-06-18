@@ -260,5 +260,5 @@ paket-files/
 __pycache__/
 *.pyc
 
-wwwroot\Avatars/*
+/PhoneBook/wwwroot/Avatars
 !wwwroot\Avatars\default_avatar.png

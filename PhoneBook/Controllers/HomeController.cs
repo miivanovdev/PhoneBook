@@ -70,11 +70,10 @@ namespace PhoneBook.Controllers
 
             return RedirectToAction("EditContactForm", new { id = editedContactViewModel.Id });
         }
-
-        [HttpDelete]
-        public async Task<IActionResult> DeleteContact(ContactViewModel contact)
+                
+        public async Task<IActionResult> DeleteContact(int id)
         {            
-            await _ContactManagerService.DeleteContact(contact);
+            await _ContactManagerService.DeleteContact(id);
             
             return RedirectToAction("Index");
         }
