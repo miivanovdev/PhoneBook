@@ -64,11 +64,11 @@ namespace PhoneBook.Controllers
         }
 
         [HttpPost]
-        public async Task<ViewResult> EditContactForm(ContactViewModel editedContactViewModel)
+        public async Task<IActionResult> EditContactForm(ContactViewModel editedContactViewModel)
         {
             await _ContactManagerService.UpdateContact(editedContactViewModel);
 
-            return View("ContactCardForm", editedContactViewModel);
+            return RedirectToAction("EditContactForm", new { id = editedContactViewModel.Id });
         }
 
         [HttpDelete]
